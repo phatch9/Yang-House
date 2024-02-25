@@ -1,9 +1,10 @@
 {
-  "name": "wedding-website",
+  "name": "page-website",
   "version": "1.0.1",
-  "description": "A wedding website with loads of features.",
+  "description": "A website with loads of features.",
   "main": "npmfile.js",
   "scripts": {
+    
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

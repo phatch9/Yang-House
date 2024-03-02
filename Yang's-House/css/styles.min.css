@@ -89,12 +89,12 @@ h5 {
 section.intro,
 section.features-extra,
 section.rsvp {
-  background: #fff;
+background: #000000; /*background visit us */
 }
 section.features,
 section.events,
 section.blog {
-  background: #f8f9fd;
+  background: #000000;
 }
 .group:after {
   content: "";
@@ -797,7 +797,7 @@ header .member-actions {
 }
 #btn-show-content {
   padding: 5px;
-  background: #fff;
+  background: #4c4646;
   cursor: pointer;
   display: inline-block;
   -webkit-transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
@@ -890,8 +890,8 @@ footer .to-top-wrapper {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  border: 1px solid #040708;
-  background: #857979;
+  border: 1px solid #e6e9ea;
+  background: #fff;
 }
 footer .to-top-wrapper .to-top {
   display: block;

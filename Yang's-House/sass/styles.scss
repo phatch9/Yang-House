@@ -276,7 +276,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url("../img/hero-min.jpg") center center;
+  background: url("../img/yang1.jpeg") center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -677,7 +677,7 @@ Instagram
 ========================================================================== */
 #instagram {
   img {
-    width: 100%;
+    width: 200%;
   }
 }
 
@@ -795,7 +795,7 @@ Google map
 #map-content {
   margin-top: 40px;
   padding: 50px 60px;
-  background: #544e4e;
+  background: #eeeeee;
   -webkit-transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
   transition: opacity 0.5s, visibility 0.6s, margin-top 0.5s;
 }

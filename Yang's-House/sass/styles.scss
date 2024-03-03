@@ -579,7 +579,7 @@ Features-stack
 .events {
   .leftcol {
     padding-right: 100px;
-    border-right: solid 1px $keyline-color;
+    border-right: solid 10px $keyline-color;
   }
   .rightcol {
     padding-left: 100px;
@@ -589,7 +589,7 @@ Features-stack
     font-size: 13px;
     font-style: italic;
     text-transform: lowercase;
-    color: $txt-light;
+    color: $txt-primary;
   }
 }
 

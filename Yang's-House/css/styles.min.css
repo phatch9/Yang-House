@@ -32,6 +32,18 @@ h5 {
   text-transform: uppercase;
   font-weight: 500;
 }
+h6 {
+  font-size: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+h7 {
+  font-size: 20px;
+  color: #b00a0a;
+  text-transform: uppercase;
+  font-weight: 650;
+}
 .btn {
   font-size: 13px;
   border: solid 2px;
@@ -608,12 +620,13 @@ header .member-actions {
 .events .rightcol {
   padding-left: 100px;
 }
-.events .time {
-  font-size: 13px;
+.events .time {     /* Change the color and font size of the event time  */
+  font-size: 15px;
   font-style: italic;
   text-transform: lowercase;
-  color: rgba(28, 54, 83, 0.6);
-}
+  color: rgba(223, 13, 13, 0.6);
+}  
+
 .blog {
   padding-bottom: 120px;
 }

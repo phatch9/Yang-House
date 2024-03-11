@@ -184,23 +184,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Jimin and Eileen Wedding",
+            title: "Visit Yang Clothing",
 
             // Event start date
-            start: new Date('May 29, 2022 4:30 PM'),
+            start: new Date('March 2, 2024 4:30 PM'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('May 29, 2022 8:00 PM'),
+            end: new Date('March 2, 2024 8:00 PM'),
 
             // Event Address
             address: '5283 Snell Ave, San Jose CA 95136',
 
             // Event Description
-            description: "We can't wait to see you on our big day. For any queries or issues, please contact Mr. Amit Roy at +91 9876543210."
+            description: "We can't wait to see you at our store. For any queries or issues, please contact Phat at +1 669 246 8326."
         }
     });
 

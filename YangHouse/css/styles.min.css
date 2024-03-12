@@ -106,7 +106,7 @@ background: #262626; /*background visit us and me */
 section.features,
 section.events,
 section.blog {
-  background: #262626;
+  background: #262626; /* background for Event update */
 }
 .group:after {
   content: "";

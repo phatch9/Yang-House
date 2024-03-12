@@ -13,7 +13,7 @@ h1 {
 h2 {
   font-size: 40px;
   font-weight: 300;
-  color: #3d4351;
+  color: #262626;
 }
 h3 {
   color: #3d4351;
@@ -101,12 +101,12 @@ h7 {
 section.intro,
 section.features-extra,
 section.rsvp {
-background: #000000; /*background visit us */
+background: #262626; /*background visit us and me */
 }
 section.features,
 section.events,
 section.blog {
-  background: #000000;
+  background: #262626;
 }
 .group:after {
   content: "";

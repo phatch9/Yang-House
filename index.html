@@ -1,11 +1,4 @@
 <!doctype html>
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
@@ -35,25 +28,52 @@
 <body id="top">
     <!-- Authentication Modal -->
     <div id="login-modal" class="modal fade" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-        <div class="modal-body">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-            <h3>Login</h3>
-            <form id="login-form" onsubmit="login(event)">
-            <div class="form-group">
-                <label for="login-username">Username</label>
-                <input type="text" id="login-username" class="form-control" required />
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                    <h3>Login</h3>
+                    <form id="login-form" onsubmit="login(event)">
+                        <div class="form-group">
+                            <label for="login-username">Username</label>
+                            <input type="text" id="login-username" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password">Password</label>
+                            <input type="password" id="login-password" class="form-control" required />
+                        </div>
+                        <button type="submit" class="btn btn-accent">Login</button>
+                    </form>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="login-password">Password</label>
-                <input type="password" id="login-password" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-accent">Login</button>
-            </form>
-        </div>
         </div>
     </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+                    <h3>Sign Up</h3>
+                    <form id="signup-form" onsubmit="signup(event)">
+                        <div class="form-group">
+                            <label for="signup-username">Username</label>
+                            <input type="text" id="signup-username" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-email">Email</label>
+                            <input type="email" id="signup-email" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-password">Password</label>
+                            <input type="password" id="signup-password" class="form-control" required />
+                        </div>
+                        <button type="submit" class="btn btn-accent">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
@@ -68,178 +88,9 @@
                     <nav>
                         <ul class="primary-nav">
                             <li><a href="#intro">Our Shop</a></li>
-                            <li><a href="#events">Events</a></li>
+                            <li><a href="gallery.html">Gallery & Events</a></li>
                             <li><a href="#instagram">Our Instagram</a></li>
-                            <li><a href="#eng-pics">Gallery</a></li>
                             <li class="hidden-sm hidden-xs"><a href="#video-bg">Explore the city</a></li>
-                        </ul>
-                        <ul class="member-actions">
-                            <li><a href="#map" class="login">Visit Us</a></li>
-                            <li><a href="#contact" class="btn-white btn-small">Contact</a></li>
-                            <li id="auth-link"></li>
-
-<!-- Contact Form Section -->
-<section id="contact" class="section-padding">
-<div class="container">
-    <div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <h3>Contact Us</h3>
-        <form id="contact-form" onsubmit="sendContactForm(event)">
-        <div class="form-group">
-            <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
-        </div>
-        <div class="form-group">
-            <input type="email" name="user_email" class="form-control" placeholder="Your Email" required />
-        </div>
-        <div class="form-group">
-            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-accent">Send</button>
-        </form>
-        <p style="margin-top:10px;">This form uses <a href="https://www.emailjs.com/" target="_blank">EmailJS</a> for email delivery. <br>Set your EmailJS service/template/public key in <code>js/contact.js</code>.</p>
-    </div>
-    </div>
-</div>
-</section>
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>emailjs.init('YOUR_PUBLIC_KEY');</script>
-<script src="js/auth.js"></script>
-<script src="js/contact.js"></script>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
-                </div>
-            </div>
-        </header>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <!--<h1>Yang House Store</h1>-->
-                    <img src="img/logo-lg.png">
-                    <!--<p class="intro">Welcome to Yang's House!</p>-->
-                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 hidden-xs"></div>
-            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                        class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
-            <div class="col-sm-4 hidden-xs"></div>
-        </div>
-    </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
-</section>
-
-<section id="invitation" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3>We are open </h3>
-                <p>Welcome to 2024 and we would love to be with you.</p>
-                <p>Thank you so much for your order. You made our day.
-                We hope you have a lovely day and see you again soon!
-                </p>
-                <!-- <div class="share-bar"></div> -->
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Our story</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/rightpage.jpeg" class="wp1"></div>
-            <div class="col-md-6">
-                <!-- <p>I first saw Eileen in the Spring of 2018 when we both were in undergrad.  
-                    There was a particular time when Eileen brought me a kimchi-stew because 
-                    I was not feeling well. That kimchi-stew at the time meant a lot for me 
-                    and there I felt I would marry this woman. Then I had to go oversea serving 
-                    army for couple years.  During the time of my service, I was given countless 
-                    courage, encouragement, and love from her. Because of her continuous support 
-                    and loyalty, I decided to keep her for good  -->
-                </p> 
-            </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/leftpage.jpeg" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/rightpage.jpeg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/leftpage.jpeg" class="wp9"></div>
-        </div>
-    </div>
-</section>
-
-<section class="events section-padding" id="events">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h7 class="header">Our Upcoming Events</h7>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                <div class="wp3">
-                    <h6><strong>10th March</strong></h6>
-
-                    <h6><span class="time">11AM</span> Photo Shoot</h6>
-                    <h6><span class="time">2PM</span> Shooting Session End</h6>
-                    <h6><span class="time">3PM</span> Review Catalog</h6>
-                    <h6><span class="time">5PM</span> Photo Listing</h6>
-
-                
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                <div class="wp6">
-                    <h6>What to bring: <!-- <span class="time">Very Important</span> --> </h6> 
-        
-                    <h6>Your Sunglasses, Comfortable Outfit</h6> 
-                    <h6>Be Prepare To Change To Our Clothes</h6>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="row section-padding">
-            <div class="col-md-4 col-md-offset-4 text-center">
-                <a class="btn btn-accent btn-small" data-toggle="modal" data-target="#dc-modal">
-                    <i class="fa fa-barcode"></i>&nbsp;&nbsp;파킹 정보
-                </a>
-            </div>
-        </div> -->
-        <!--<div class="row">
-            <div class="col-xs-12 section-border section-padding">
-            </div>
-        </div>-->
-    </div>
-
-    <!-- <div id="dc-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <h3 class="text-center section-padding">Parking Information</h3>
-                    <h5>Martial Cottle Park Parking Space <span class="time">$6</span></h5>
-                    <p>
-                        <strong>Maybella Cottle Site</strong>
-                        <br>
-                        <a href="https://sistercounties.sccgov.org/sites/g/files/exjcpb521/files/Map/MartialCottleGuideMap.pdf">Guide Map</a>
-                    </p>
-                </div> -->
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    <!-- </div>/.modal -->
-
-</section>
 
 <section id="instagram" class="section-padding">
     <div class="container">
@@ -259,91 +110,6 @@
     </div>
 </section>
 
-<section id="eng-pics" class="section-padding">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">Gallery</h3>
-                <p>Click the photos to explore out latest concept in gallery</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3490-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3490-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3489-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3489-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3484-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3484-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3488-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3488-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3487-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3487-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-2">
-                <a class="fancybox" rel="group" href="img/eng_pics/IMG_3486-lg.JPG">
-                    <div class="img-wrap">
-                        <div class="overlay">
-                            <i class="fa fa-search"></i>
-                        </div>
-                        <img src="img/eng_pics/IMG_3486-sm.JPG" alt=""/>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
-    <!--<div class="row">
-        <div class="col-md-12">
-            <div class="diamond floating-logo">
-                <img src="img/sketch-logo.png" alt="Sketch Logo">
-                <div class="ring"></div>
-            </div>
-        </div>
-    </div>-->
-</section>
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
@@ -373,11 +139,11 @@
                     <div class="row">
                         <div class="col-md-6">
                             <h5>Yang's House</h5>
-                            <p>422 Nguyen Thi Minh Khai, P.1 Cao Lanh, Dong Thap</p>
+                            <p>42 Le Quy Don, Ward 6, District 3, Ho Chi Minh City, Vietnam</p>
                         </div>
                         <div class="col-md-6">
                             <h5>Phone Number:</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+84706525259">+84 70 652 5259</a><br>
+                            <p><i class="fa fa-mobile"></i> <a href="tel://+84706525259">+84 90 765 4321</a><br>
                             <!-- <i class="fa fa-mobile"></i> <a href="tel://+16692468326">+1 669-246-8326</a></p> -->
                         </div>
                         
@@ -409,7 +175,7 @@
     </div>
 </section>
 
-<section class="rsvp text-center" id="rsvp">
+<section class="rsvp text-center" id="">
 
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -433,10 +199,6 @@
                 <h6>Thank you for visiting us</h6>
                 <h6>We greatly appreciate to hear from you as soon as possible</h6>
                 <form class ="rsvp-form" action="https://sheetdb.io/api/v1/79772o1mbj04x" method="POST" id="sheetdb-form">
-                <!-- 성함: <input name="data[email]">
-                전화번호: <input name="data[name]">
-                참석 가족 인원: <input name="data[extras]">
-                <button type="submit">Submit</button> -->
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
@@ -502,7 +264,7 @@ form.addEventListener("submit", e => {
     }).then(
         response => response.json()
     ).then((html) => {
-    alert('success')
+        alert('success')
     });
 });
 
@@ -510,13 +272,21 @@ form.addEventListener("submit", e => {
 function updateAuthLink() {
     var link = document.getElementById('auth-link');
     if (localStorage.getItem('yanghouse_logged_in') === 'true') {
-    link.innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+        link.innerHTML = '<a href="#" onclick="logout()">Logout</a>';
     } else {
-    link.innerHTML = '<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>';
+        link.innerHTML = '<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>';
     }
 }
 document.addEventListener('DOMContentLoaded', updateAuthLink);
 window.addEventListener('storage', updateAuthLink);
+
+// Sign Up form handler (demo only, no backend)
+function signup(event) {
+    event.preventDefault();
+    alert('Sign up successful! (Demo only, no backend)');
+    document.getElementById('signup-form').reset();
+    $('#signup-modal').modal('hide');
+}
 </script>
 
 

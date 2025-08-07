@@ -33,6 +33,28 @@
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body id="top">
+    <!-- Authentication Modal -->
+    <div id="login-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+            <h3>Login</h3>
+            <form id="login-form" onsubmit="login(event)">
+            <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-accent">Login</button>
+            </form>
+        </div>
+        </div>
+    </div>
+    </div>
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -53,7 +75,37 @@
                         </ul>
                         <ul class="member-actions">
                             <li><a href="#map" class="login">Visit Us</a></li>
-                            <li><a href="#rsvp" class="btn-white btn-small">Contact</a></li>
+                            <li><a href="#contact" class="btn-white btn-small">Contact</a></li>
+                            <li id="auth-link"></li>
+
+<!-- Contact Form Section -->
+<section id="contact" class="section-padding">
+<div class="container">
+    <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <h3>Contact Us</h3>
+        <form id="contact-form" onsubmit="sendContactForm(event)">
+        <div class="form-group">
+            <input type="text" name="user_name" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="form-group">
+            <input type="email" name="user_email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="form-group">
+            <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-accent">Send</button>
+        </form>
+        <p style="margin-top:10px;">This form uses <a href="https://www.emailjs.com/" target="_blank">EmailJS</a> for email delivery. <br>Set your EmailJS service/template/public key in <code>js/contact.js</code>.</p>
+    </div>
+    </div>
+</div>
+</section>
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>emailjs.init('YOUR_PUBLIC_KEY');</script>
+<script src="js/auth.js"></script>
+<script src="js/contact.js"></script>
                         </ul>
                     </nav>
                 </div>
@@ -77,7 +129,7 @@
         <div class="row">
             <div class="col-sm-4 hidden-xs"></div>
             <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
-                                                           class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
+                                                        class="btn btn-accent btn-large rsvp-btn">RSVP</a></div>
             <div class="col-sm-4 hidden-xs"></div>
         </div>
     </div>
@@ -91,7 +143,7 @@
                 <h3>We are open </h3>
                 <p>Welcome to 2024 and we would love to be with you.</p>
                 <p>Thank you so much for your order. You made our day.
-                   We hope you have a lovely day and see you again soon!
+                We hope you have a lovely day and see you again soon!
                 </p>
                 <!-- <div class="share-bar"></div> -->
             </div>
@@ -100,7 +152,7 @@
 </section>
 
 <section id="intro">
-     <div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3 class="header">Our story</h3>
@@ -144,7 +196,7 @@
                     <h6><span class="time">3PM</span> Review Catalog</h6>
                     <h6><span class="time">5PM</span> Photo Listing</h6>
 
-                   
+                
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
@@ -295,7 +347,7 @@
 
 <section id="video-bg" class="hidden-sm hidden-xs">
     <div id="bgndVideo" class="player"
-         data-property="{videoURL:'https://www.youtube.com/watch?v=6Ey-33Evd8M',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:20, stopAt:150, opacity:1}">
+        data-property="{videoURL:'https://www.youtube.com/watch?v=6Ey-33Evd8M',containment:'#video-bg',autoPlay:true, mute:true, showControls:false, startAt:20, stopAt:150, opacity:1}">
     </div>
     <div id="video-content">
         <h5>Cao Lanh</h5>
@@ -338,7 +390,7 @@
                     <div class="row text-center">
                         <!-- <div class="col-md-6" style="padding: 5px;">
                             <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=GBO9KQC2_YTdN6kXTwea44esS1qlLYTO&pickup=my_location&dropoff[formatted_address]=5283 Snell Ave%20San Jose%20-%20&dropoff[latitude]=37.263351199113956&dropoff[longitude]=-121.83339318050838"><i
+                            href="https://m.uber.com/ul/?action=setPickup&client_id=GBO9KQC2_YTdN6kXTwea44esS1qlLYTO&pickup=my_location&dropoff[formatted_address]=5283 Snell Ave%20San Jose%20-%20&dropoff[latitude]=37.263351199113956&dropoff[longitude]=-121.83339318050838"><i
                                     class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
@@ -389,15 +441,15 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-envelope"></i><input type="email" name="data[email]" class=""
-                                                                     placeholder="Your Email"
-                                                                     required>
+                                                                    placeholder="Your Email"
+                                                                    required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-user"></i><input name="data[name]" class=""
-                                                                 placeholder="Name"
-                                                                 required>
+                                                                placeholder="Name"
+                                                                required>
                             </div>
                         </div>
                     </div>
@@ -405,8 +457,8 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-users"></i><input type="text" name="data[extras]" class="" 
-                                                                  placeholder="What can we help you?"
-                                                                  required>
+                                                                placeholder="What can we help you?"
+                                                                required>
                             </div>
                         </div>
                         <!-- <div class="col-md-6 col-sm-6">
@@ -440,8 +492,9 @@
 </footer>
 
 <script>
-  var form = document.getElementById('sheetdb-form');
-  form.addEventListener("submit", e => {
+// RSVP form handler (existing)
+var form = document.getElementById('sheetdb-form');
+form.addEventListener("submit", e => {
     e.preventDefault();
     fetch(form.action, {
         method : "POST",
@@ -449,11 +502,22 @@
     }).then(
         response => response.json()
     ).then((html) => {
-      // you can put any JS code here
-      alert('success')
+    alert('success')
     });
-  });  
- </script>
+});
+
+// Authentication UI logic
+function updateAuthLink() {
+    var link = document.getElementById('auth-link');
+    if (localStorage.getItem('yanghouse_logged_in') === 'true') {
+    link.innerHTML = '<a href="#" onclick="logout()">Logout</a>';
+    } else {
+    link.innerHTML = '<a href="#" data-toggle="modal" data-target="#login-modal">Login</a>';
+    }
+}
+document.addEventListener('DOMContentLoaded', updateAuthLink);
+window.addEventListener('storage', updateAuthLink);
+</script>
 
 
 

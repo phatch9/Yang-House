@@ -28,6 +28,36 @@ Yang's House
 │   ├── print.css
 │   ├── queries.css
 │   └── styles.min.css
+├── psd
+│   ├── favicon.psd
+│   ├── instagram.psd
+│   ├── iphone_instagram.psd
+│   ├── logo-lg.psd
+│   ├── logo.psd
+│   └── sophia.font
+├── sass
+    ├── ie.scss
+    ├── partials
+    │   ├── buttons.scss
+    │   ├── colors.scss
+    │   ├── layout.scss
+    │   └── typography.scss
+    ├── print.scss
+    └── styles.scss
+├── gallery.html
+├── index.html
+├── js
+│   ├── jquery.counterup.min.js
+│   ├── jquery.fancybox.pack.js
+│   ├── jquery.flexslider-min.js
+│   ├── jquery.mb.YTPlayer.min.js
+│   ├── scripts.js
+│   ├── scripts.min.js
+│   ├── vendor
+│   ├── bootstrap.min.js
+│   ├── jquery-1.11.2.min.js
+│   ├── modernizr-2.8.3-respond-1.4.2.min.js
+│   └── ouical.js
 ├── android-chrome-192x192.png
 ├── android-chrome-256x256.png
 ├── apple-touch-icon.png
@@ -37,8 +67,6 @@ Yang's House
 ├── favicon-32x32.png
 ├── favicon-64x64.png
 ├── favicon.ico
-├── gallery.html
-├── index.html
 ├── fonts
 │   ├── FontAwesome.otf
 │   ├── et-line-font
@@ -101,42 +129,14 @@ Yang's House
 │   ├── leftpage.jpeg
 │   ├── right.jpeg
 │   ├── yang_instagram.jpg
-│   ├── yang2.jpeg
-├── js
-│   ├── jquery.counterup.min.js
-│   ├── jquery.fancybox.pack.js
-│   ├── jquery.flexslider-min.js
-│   ├── jquery.mb.YTPlayer.min.js
-│   ├── scripts.js
-│   ├── scripts.min.js
-│   ├── vendor
-│   ├── bootstrap.min.js
-│   ├── jquery-1.11.2.min.js
-│   ├── modernizr-2.8.3-respond-1.4.2.min.js
-│   └── ouical.js
+│   └── yang2.jpeg
 ├── manifest.json
 ├── mstile-150x150.png
-├── node_modules
+├── .gitignore
 ├── npmfile.js
 ├── package-lock.json
 ├── package.json
-├── psd
-│   ├── favicon.psd
-│   ├── instagram.psd
-│   ├── iphone_instagram.psd
-│   ├── logo-lg.psd
-│   ├── logo.psd
-│   ├── sophia.font
-└── sass
-    ├── ie.scss
-    ├── partials
-    │   ├── buttons.scss
-    │   ├── colors.scss
-    │   ├── layout.scss
-    │   └── typography.scss
-    ├── print.scss
-    └── styles.scss
-├── safari-pinned-tab.svg
+└── safari-pinned-tab.svg
 
 
 ```

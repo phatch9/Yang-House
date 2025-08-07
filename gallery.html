@@ -6,6 +6,7 @@
     <title>Gallery & Events | Yang's House</title>
     <meta name="description" content="Gallery and Events at Yang's House.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery.fancybox.css">
@@ -15,45 +16,63 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
-            <nav>
-                <ul class="primary-nav">
-                    <li><a href="index.html#intro">Our Shop</a></li>
-                    <li><a href="gallery.html">Gallery & Events</a></li>
-                    <li><a href="index.html#instagram">Our Instagram</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <section class="events section-padding" id="events">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="header">Our Upcoming Events</h3>
+    <section class="navigation">
+        <header>
+            <div class="header-content">
+                <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
+                <div class="header-nav">
+                    <nav>
+                        <ul class="primary-nav">
+                            <li><a href="index.html#intro">Our Shop</a></li>
+                            <li><a href="gallery.html">Gallery & Events</a></li>
+                            <li><a href="index.html#instagram">Our Instagram</a></li>
+                            <li class="hidden-sm hidden-xs"><a href="index.html#video-bg">Explore the city</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navicon">
+                    <a class="nav-toggle" href="#"><span></span></a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
-                    <div class="wp3">
-                        <h6><strong>10th March</strong></h6>
-                        <h6><span class="time">11AM</span> Photo Shoot</h6>
-                        <h6><span class="time">2PM</span> Shooting Session End</h6>
-                        <h6><span class="time">3PM</span> Review Catalog</h6>
-                        <h6><span class="time">5PM</span> Photo Listing</h6>
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
-                    <div class="wp6">
-                        <h6>What to bring:</h6>
-                        <h6>Your Sunglasses, Comfortable Outfit</h6>
-                        <h6>Be Prepare To Change To Our Clothes</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </header>
     </section>
+    <section class="events section-padding" id="events" style="background-color: #222; color: #fff;">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <h3 class="header" style="color: #fff;">Our Upcoming Events</h3>
+                <p class="lead" style="color: #ddd;">Join us for a day of creativity and community</p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Event Schedule -->
+            <div class="col-md-6 col-sm-12 mb-4">
+                <div class="event-box p-4" style="background-color: #333; border-radius: 8px;">
+                    <h5 style="color: #fff;"><strong>10th March</strong></h5>
+                    <ul style="list-style: none; padding-left: 0; color: #ccc;">
+                        <li><strong>11AM:</strong> Photo Shoot</li>
+                        <li><strong>2PM:</strong> Shooting Session End</li>
+                        <li><strong>3PM:</strong> Review Catalog</li>
+                        <li><strong>5PM:</strong> Photo Listing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Event Info -->
+            <div class="col-md-6 col-sm-12 mb-4">
+                <div class="event-box p-4" style="background-color: #333; border-radius: 8px;">
+                    <h5 style="color: #fff;">🎒 What to Bring</h5>
+                    <ul style="list-style: disc; color: #ccc; padding-left: 20px;">
+                        <li>Your Sunglasses</li>
+                        <li>Comfortable Outfit</li>
+                        <li>Be Prepared to Change into Our Clothes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
     <section id="eng-pics" class="section-padding">
         <div class="container-fluid">
             <div class="row">
@@ -142,3 +161,6 @@
     <script src="js/scripts.min.js"></script>
 </body>
 </html>
+
+
+

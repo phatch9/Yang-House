@@ -15,39 +15,61 @@
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
-<body>
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="logo"><a href="index.html"><img src="img/logo.png" alt="Logo"></a></div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="index.html#intro">Our Shop</a></li>
-                            <li><a href="gallery.html">Gallery & Events</a></li>
-                            <li><a href="index.html#instagram">Our Instagram</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="index.html#video-bg">Explore the city</a></li>
-                        </ul>
-                    </nav>
+<body id="top">
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="Logo"></a>
+                    </div>
+                    <div class="header-nav">
+                        <nav>
+                            <ul class="primary-nav">
+                                <li><a href="#map">Our Shop</a></li>
+                                <li><a href="gallery.html">Gallery & Events</a></li>
+                                <li><a href="#instagram">Our Instagram</a></li>
+                                <li class="hidden-sm hidden-xs"><a href="#video-bg">Explore the city</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-                <div class="navicon">
-                    <a class="nav-toggle" href="#"><span></span></a>
+            </header>
+        </section>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png">
                 </div>
             </div>
-        </header>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs"></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#rsvp"
+                                                        class="btn btn-accent btn-large rsvp-btn">Explore Us</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
+        </div>
+        </div>
+    <div class="down-arrow floating-arrow"><a href="#events"><i class="fa fa-angle-down"></i></a></div>
     </section>
-    <section class="events section-padding" id="events" style="background-color: #222; color: #fff;">
+
+    <!-- Event Section -->
+    <section class="events section-padding" id="events" style="color: #fff;">
     <div class="container">
         <div class="row mb-5">
             <div class="col-md-12 text-center">
                 <h3 class="header" style="color: #fff;">Our Upcoming Events</h3>
-                <p class="lead" style="color: #ddd;">Join us for a day of creativity and community</p>
+                <p class="lead" style="color: #ddd;">Join us for a day of creativity</p>
             </div>
         </div>
+    </div>
+    <section class="events section-padding" id="events" style="color: #fff;">
+    <div class="container">
         <div class="row">
             <!-- Event Schedule -->
-            <div class="col-md-6 col-sm-12 mb-4">
-                <div class="event-box p-4" style="background-color: #333; border-radius: 8px;">
+            <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
+                <div class="event-box p-4">
                     <h5 style="color: #fff;"><strong>10th March</strong></h5>
                     <ul style="list-style: none; padding-left: 0; color: #ccc;">
                         <li><strong>11AM:</strong> Photo Shoot</li>
@@ -60,12 +82,12 @@
 
             <!-- Event Info -->
             <div class="col-md-6 col-sm-12 mb-4">
-                <div class="event-box p-4" style="background-color: #333; border-radius: 8px;">
+                <div class="event-box p-4">
                     <h5 style="color: #fff;">🎒 What to Bring</h5>
                     <ul style="list-style: disc; color: #ccc; padding-left: 20px;">
                         <li>Your Sunglasses</li>
                         <li>Comfortable Outfit</li>
-                        <li>Be Prepared to Change into Our Clothes</li>
+                        <li>Be Prepared to Change Our Clothes and Concepts</li>
                     </ul>
                 </div>
             </div>
@@ -73,7 +95,7 @@
     </div>
     </section>
 
-    <section id="eng-pics" class="section-padding">
+    <section id="eng-pics" class="section-padding" style="color: #fff;">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 text-center">

@@ -14,13 +14,6 @@
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <style>
-        /* Ensure header text stays white */
-        #events h2.header,
-        #events p.lead {
-            color: #fff !important;
-        }
-    </style>
 </head>
 <body id="top">
     <!-- Hero Section -->
@@ -29,38 +22,40 @@
             <header>
                 <div class="header-content">
                     <div class="logo">
-                        <a href="#"><img src="img/logo.png" alt="Yang's House Logo"></a>
+                        <a href="#"><img src="img/logo.png" alt="Logo"></a>
                     </div>
                     <nav class="header-nav">
                         <ul class="primary-nav">
-                            <li><a href="#map">Our Shop</a></li>
+                            <li><a href="index.html">Our Shop</a></li>
                             <li><a href="gallery.html">Gallery & Events</a></li>
-                            <li><a href="#instagram">Our Instagram</a></li>
-                            <li class="hidden-sm hidden-xs"><a href="#video-bg">Explore the City</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
         </section>
-
-        <div class="container text-center">
-            <img src="img/logo-lg.png" alt="Yang's House Large Logo" class="img-responsive center-block">
-            <div class="row">
-                <div class="col-sm-4 hidden-xs"></div>
-                <div class="col-sm-4 hidden-xs">
-                    <a href="#events" class="btn btn-accent btn-large rsvp-btn">Explore Us</a>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png">
                 </div>
-                <div class="col-sm-4 hidden-xs"></div>
             </div>
         </div>
-
-        <div class="down-arrow floating-arrow">
-            <a href="#events" aria-label="Scroll to Events"><i class="fa fa-angle-down"></i></a>
+        <div class="row">
+            <div class="col-sm-4 hidden-xs"></div>
+            <div class="col-sm-4 hidden-xs text-center"><a href="#events"
+                                                        class="btn btn-accent btn-large rsvp-btn">Explore Us</a></div>
+            <div class="col-sm-4 hidden-xs"></div>
         </div>
+        </div>
+    <div class="down-arrow floating-arrow"><a href="#events"><i class="fa fa-angle-down"></i></a></div>
     </section>
 
     <!-- Events Section -->
-    <section class="events section-padding" id="events" style="color: #fff;">
+    <section class="section-padding" id="events" >
         <div class="container">
             <div class="row mb-5 text-center">
                 <div class="col-md-12">
@@ -86,7 +81,7 @@
                 </div>
             </div>
         </div>
-        <hr style="border-color: rgba(255,255,255,0.2); width: 60%; margin: 20px auto;">
+        <hr style="border-color: rgba(45, 37, 37, 0.2); width: 60%; margin: 20px auto;">
         <!-- What to Bring -->
         <div class="row mt-4">
             <div class="col-md-12">

@@ -4,32 +4,222 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Shop | Yang's House</title>
-    <meta name="description" content="Shop products at Yang's House.">
+    <meta name="description" content="Catalog at Yang's House.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <style>
-        body { background: #f7f7f7; }
-        .navbar-fixed-top {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1030;
+        :root {
+            --primary-color: #2d7c5b;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e9ecef;
+            --text-color: #212529;
+            --text-light: #6c757d;
+            --shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        body { 
+            background: var(--secondary-color);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        /* Products Section */
+        .products-section {
+            padding: 60px 0;
+            background: var(--secondary-color);
+        }
+
+        .product-card {
             background: #fff;
-            border-bottom: 1px solid #eee;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
-        .navbar-fixed-top .header-content {
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-img {
+            transform: scale(1.03);
+        }
+
+        .product-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .product-desc {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .btn-add {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-add:hover {
+            background: #236347;
+            transform: translateY(-2px);
+        }
+
+        /* Cart */
+        .cart {
+            position: fixed;
+            top: 90px;
+            right: 30px;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            width: 350px;
+            z-index: 1000;
+        }
+
+        .cart-header {
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .cart-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .cart-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--accent-color);
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: 12px 32px;
+            align-items: center;
         }
-        .navbar-fixed-top .logo img { height: 40px; }
-        .navbar-fixed-top .header-nav ul { margin-bottom: 0; }
+
+        .cart-total {
+            font-weight: 600;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .btn-checkout {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-checkout:hover {
+            background: #236347;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 991px) {
+            .cart {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: auto;
+                width: 100%;
+                border-radius: 16px 16px 0 0;
+                max-height: 60vh;
+                transform: translateY(85%);
+                transition: transform 0.3s ease;
+            }
+
+            .cart.active {
+                transform: translateY(0);
+            }
+
+            .cart-header {
+                cursor: pointer;
+                position: relative;
+            }
+
+            .cart-header::after {
+                content: '↑';
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero .hero-content {
+                padding: 100px 0 60px;
+            }
+
+            .hero .hero-content img {
+                max-width: 250px;
+            }
+
+            .product-card {
+                margin-bottom: 20px;
+            }
+        }
         .shop-header { background: #fff; padding: 40px 0 20px; margin-bottom: 30px; border-bottom: 1px solid #eee; }
         .shop-header h2 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
         .shop-header p { color: #888; font-size: 1.2rem; }
@@ -50,25 +240,39 @@
         .main-content { padding-top: 80px; }
     </style>
 </head>
-<body>
-    <nav class="navbar-fixed-top">
-        <div class="header-content">
-            <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="Logo"></a>
+<body id="top">
+
+    <!-- Navigation -->
+    <section class="hero">
+        <section class="navigation">
+            <header>
+                <div class="header-content">
+                    <div class="logo">
+                        <a href="#"><img src="img/logo.png" alt="Logo"></a>
+                    </div>
+                    <nav class="header-nav">
+                        <ul class="primary-nav">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="gallery.html">Gallery & Events</a></li>
+                        </ul>
+                        <ul class="member-actions">
+                            <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="hero-content text-center">
+                    <img src="img/logo-lg.png">
+                </div>
             </div>
-            <nav class="header-nav">
-                <ul class="primary-nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="gallery.html">Gallery & Events</a></li>
-                    <li><a href="index.html#instagram">Our Instagram</a></li>
-                    <li class="hidden-sm hidden-xs"><a href="index.html#video-bg">Explore the city</a></li>
-                </ul>
-                <ul class="member-actions">
-                    <li><a href="index.html#rsvp" class="btn-white btn-small">RSVP</a></li>
-                </ul>
-            </nav>
         </div>
+        </div>
+    </section>
+
     </nav>
     <div class="main-content">
     <div class="shop-header text-center">
@@ -115,7 +319,6 @@
     <footer>
     <div class="container text-center" style="margin-top:40px;">
             <span class="to-top-wrapper"><a href="#top" class="to-top" aria-label="Back to Top"><i class="fa fa-angle-up"></i></a></span>
-            <p>Crafted with <span style="color:#e25555;">&#10084;&#65039;</span> for this store</p>
         </div>
     </footer>
     <script>

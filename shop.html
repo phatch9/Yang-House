@@ -240,43 +240,7 @@
         </section>
     </section>
 
-    </nav>
     <div class="main-content">
-    <!-- Booking System Section -->
-    <section class="booking-section" id="booking" style="background:#fff; padding:60px 0;">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-lg-8 col-md-10 mx-auto text-center">
-                    <h2 class="display-5 mb-3">Book a Photo Session</h2>
-                    <p class="lead text-muted">Schedule your appointment and receive instant confirmation.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <form id="booking-form">
-                        <div class="form-group mb-3">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="date">Date & Time</label>
-                            <input type="datetime-local" class="form-control" id="date" name="date" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="notes">Notes</label>
-                            <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success w-100">Book Now</button>
-                        <div id="booking-message" class="mt-3"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
     <div class="shop-header text-center">
         <h2>Shop Products</h2>
         <p>Browse our exclusive collection from catalog and bring us home!</p>
@@ -312,12 +276,49 @@
             </div>
         </div>
     </div>
+    </div>
     <div class="cart" id="cart">
     <div class="cart-header"><i class="fa fa-shopping-cart"></i> Your Cart</div>
     <ul class="cart-list" id="cart-list"></ul>
     <div class="cart-total" id="cart-total">Total: $0.00</div>
     <button class="btn btn-success" onclick="checkout()"><i class="fa fa-credit-card"></i> Checkout</button>
     </div>
+
+    <!-- Booking System Section -->
+    <section class="booking-section" id="booking" style="background:#fff; padding:60px 0;">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-8 col-md-10 mx-auto text-center">
+                    <h2 class="display-5 mb-3">Book a Photo Session</h2>
+                    <p class="lead text-muted">Schedule your appointment and receive instant confirmation.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="booking-form">
+                        <div class="form-group mb-3">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="date">Date & Time</label>
+                            <input type="datetime-local" class="form-control" id="date" name="date" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="notes">Notes</label>
+                            <textarea class="form-control" id="notes" name="notes" rows="2"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Book Now</button>
+                        <div id="booking-message" class="mt-3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
     <div class="container text-center" style="margin-top:40px;">
             <span class="to-top-wrapper"><a href="#top" class="to-top" aria-label="Back to Top"><i class="fa fa-angle-up"></i></a></span>
